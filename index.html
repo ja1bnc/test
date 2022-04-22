@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Test</title>
-  </head>
+    <meta charset="UTF-8">
+    <title>THEOplayer: Getting Started</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.myth.theoplayer.com/9a566f53-c82a-4231-9e82-fbe3e3242324/ui.css">
+  </head> 
   <body>
-    <p>Hello</p>
+    <h1>THEOplayer: Getting Started</h1>
+    <div class="theoplayer-container theoplayer-skin video-js vjs-16-9"></div>
+    <script type="text/javascript" src="https://cdn.myth.theoplayer.com/9a566f53-c82a-4231-9e82-fbe3e3242324/THEOplayer.js"></script>
+    <script>
+      var container = document.querySelector(".theoplayer-container");
+      var player = new THEOplayer.Player(container, {
+        libraryLocation: "https://cdn.myth.theoplayer.com/9a566f53-c82a-4231-9e82-fbe3e3242324",
+        license: "sZP7IYe6T6fL3L5zIlaLTOzz0lerFSx1TSR-CSbt0Ozt0QBo0DIK3KarClh6FOPlUY3zWokgbgjNIOf9fK0t3Dfi3lxKFDIl3oa-3uI1Tmz_IlA1FDfo0ofL0ShkTD4g3ZfVfK4_bQgZCYxNWoryIQXzImf90SCiTSbk3uai0u5i0Oi6Io4pIYP1UQgqWgjeCYxgflEc3l5r0lbi0lhk3u5oFOPeWok1dDrLYtA1Ioh6TgV6UQ1gWtAVCYggb6rlWoz6FOPVWo31WQ1qbta6FOPJboINIQxVImrpIYa6FOPJbo1gWQipWK4zfgzVfKxqWDXNWG3ybojkbK3gflNWfGxEIDjiWQXrIYfpCoj-f6i6WQjlCDcEWt3zf6i6v6PUFOPLIQ-LflNWfK1zWDikfgzVfG3gWKxydDkibK4LbogqW6f9UwPkIYz"
+      });
+      player.source = {
+        sources: [{
+          src: "https://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8",
+          type: "application/x-mpegurl"
+        }]
+      };
+    </script>
   </body>
 </html>
